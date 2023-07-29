@@ -1,4 +1,7 @@
 import tkinter as tk    #Zeichnet Fenster
+import os               #prüft vorhandene Datei
+
+from database.db_init import create_database
 
 root = tk.Tk()  #erstellt Objekt des Fensters, genannt root
 
@@ -10,5 +13,10 @@ root.resizable(width=True, height=True) #Einstellung ob die Groeße des Fensters
 
 label1 = tk.Label(root, text = "Auto Landlord CRM") #erstelle Label in Parent root
 label1.pack()   #platziert label1 in root
+
+if os.path.exists("ALC.db"):
+    pass
+else:
+    create_database()
 
 root.mainloop() #Ereignissschleife innerhalb des Fensters
