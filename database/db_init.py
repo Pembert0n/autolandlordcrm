@@ -11,6 +11,7 @@ Gebaeude = """
         Ortschaft VARCHAR(255),
         Strasse VARCHAR(255),
         Hausnummer INT(4),
+        Heizungsart VARCHAR(255),
         Anzahl Wohnobjekte INT(3)
     )
 """
