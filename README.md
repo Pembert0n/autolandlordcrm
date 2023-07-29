@@ -1,2 +1,2 @@
-# ALC - Auto Landlord Crm 
+# ALC - Auto Landlord CRM
 CRM Software to automate latters, have checklists and add notes
