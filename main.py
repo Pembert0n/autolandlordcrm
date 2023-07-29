@@ -1,7 +1,7 @@
 import tkinter as tk    #Zeichnet Fenster
 import os               #prüft vorhandene Datei
 
-from database.db_init import create_database
+from database.db_init import create_database    #importiert Funktion aus anderer Datei
 
 root = tk.Tk()  #erstellt Objekt des Fensters, genannt root
 
@@ -15,8 +15,8 @@ label1 = tk.Label(root, text = "Auto Landlord CRM") #erstelle Label in Parent ro
 label1.pack()   #platziert label1 in root
 
 if os.path.exists("ALC.db"):
-    pass
+    pass                #geh weiter in der Datei
 else:
-    create_database()
+    create_database()   #führe Funktion aus
 
 root.mainloop() #Ereignissschleife innerhalb des Fensters
