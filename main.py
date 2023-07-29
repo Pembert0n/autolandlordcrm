@@ -8,7 +8,7 @@ if os.path.exists("ALC.db"):
 else:
     create_database()   #führe Funktion aus
 
-root = tk.Tk()  #erstellt Objekt des Fensters, genannt root
+root = tk.Tk()  #erstellt Objekt des Fensters, beginnt den mainloop
 
 root.title("Auto Landlord CRM") #Titel des Fensters
 root.minsize(width=800, height=400) #Mindestgoeße des Fensters in px
