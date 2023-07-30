@@ -1,10 +1,13 @@
+"""sqlite 3 für Datenbank-Ebene."""
 import sqlite3
 
+
 def create_database():
+    """Erstellt Datenbank mit benötigt Tabellen"""
     con = sqlite3.connect("ALC.db")
     cur = con.cursor()
 
-    Gebaeude = """
+    gebaeude = """
         CREATE TABLE Gebaeude(
             ObjektID PRIMARY KEY,
             Postleitzahl INT(5),
@@ -16,7 +19,7 @@ def create_database():
         )
     """
 
-    Wohnobjekt = """
+    wohnobjekt = """
         CREATE TABLE Wohnobjekt(
             ObjektID INT,
             WohnobjektID PRIMARY KEY,
@@ -28,7 +31,7 @@ def create_database():
         )
     """
 
-    Mieter = """
+    mieter = """
         CREATE TABLE Mieter(
             ObjektID INT,
             WohnobjektID INT,
@@ -47,9 +50,7 @@ def create_database():
         )
     """
 
-    cur.execute(Gebaeude)
-    cur.execute(Wohnobjekt)
-    cur.execute(Mieter)
-    con.commit
-    con.close
-    print("create_database ausgeführt") #debug
+    cur.execute(gebaeude)
+    cur.execute(wohnobjekt)
+    cur.execute(mieter)
+    print("create_database ausgeführt")  # debug
