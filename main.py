@@ -1,10 +1,13 @@
 import tkinter as tk    #Zeichnet Fenster
+#from tkinter import ttk
 import os               #prüft vorhandene Datei
+from PIL import  Image, ImageTk
 
 from database.db_init import create_database    #importiert Funktion aus anderer Datei
 
 if os.path.exists("ALC.db"):
     pass                #geh weiter in der Datei
+    print("Keine neue DB erstellt") #debug
 else:
     create_database()   #führe Funktion aus
 
