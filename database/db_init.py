@@ -3,7 +3,7 @@ import sqlite3
 
 
 def create_database():
-    """Erstellt Datenbank mit benötigt Tabellen"""
+    """Erstellt Datenbank mit benötigt Tabellen."""
     con = sqlite3.connect("ALC.db")
     cur = con.cursor()
 
