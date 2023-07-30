@@ -1,2 +1,4 @@
-Suphi "Rolvo" Pembe
-Avram Ivanovic
+|Projektmitglied|Rollen|
+|---------------|------|
+|Suphi "Rolvo" Pembe| • Projekteigentümer <br> • Leitender Entwickler|
+|Avram Ivanovic| • Entwickler |
