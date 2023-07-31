@@ -32,10 +32,6 @@ banner = tk.Label(root,
 
 banner.grid(row=0, column=0, columnspan=2, padx=0, pady=0)
 
-gebaeude_frame = tk.Frame(root)
-gebaeude_frame.grid(row=1, column=0, columnspan=2, padx=20, pady=20)
-# erstelle Container um Buttons darin nebeneinander zu plazieren
-
 add_house_icon = Image.open("graphics/house-add-512.png").resize((50, 50))
 add_house_icon_tk = ImageTk.PhotoImage(add_house_icon)
 
