@@ -25,7 +25,15 @@ root.minsize(width=800, height=400)  # Mindestgoeße des Fensters in px
 root.geometry("1280x720")  # Standardgroeße des Fensters in px
 root.resizable(width=True, height=True)  # Ob Groeße des Fensters bearbeitbar
 
+banner = tk.Label(root,
+                  text="ALC - Automated Landlord CRM",
+                  font=("Arial", 25),
+                  anchor="w")
+
+banner.grid(row=0, column=0, columnspan=2, padx=0, pady=0)
+
 gebaeude_frame = tk.Frame(root)
+gebaeude_frame.grid(row=1, column=0, columnspan=2, padx=20, pady=20)
 # erstelle Container um Buttons darin nebeneinander zu plazieren
 
 add_house_icon = Image.open("graphics/house-add-512.png").resize((50, 50))
@@ -39,7 +47,7 @@ gebaeude_add_button = tk.Button(root,
                                 background="gray74",
                                 command=empty_button)
 
-gebaeude_add_button.grid(row=0, column=0, padx=20, pady=20)
+gebaeude_add_button.grid(row=1, column=0, padx=20, pady=20)
 # anchor -> Ausrichtung nach Himmelsrichtung
 # pady/padx -> Seitenabstand
 
@@ -54,6 +62,6 @@ gebaeude_remove_button = tk.Button(root,
                                    background="gray74",
                                    command=empty_button)
 
-gebaeude_remove_button.grid(row=0, column=1, padx=20, pady=20)
+gebaeude_remove_button.grid(row=1, column=1, padx=20, pady=20)
 
 root.mainloop()  # Ereignissschleife innerhalb des Fensters
