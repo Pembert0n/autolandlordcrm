@@ -30,34 +30,19 @@ banner = tk.Label(root,
                   font=("Arial", 25),
                   anchor="w")
 
-banner.grid(row=0, column=0, columnspan=2, padx=0, pady=0)
+banner.grid(row=0, column=0, columnspan=1, padx=0, pady=0)
 
-add_house_icon = Image.open("graphics/house-add-512.png").resize((50, 50))
-add_house_icon_tk = ImageTk.PhotoImage(add_house_icon)
+check_house_icon = Image.open("graphics/house-30-512.png").resize((50, 50))
+check_house_icon_tk = ImageTk.PhotoImage(check_house_icon)
 
 gebaeude_add_button = tk.Button(root,
-                                text=" Gebäude hinzufügen ",
-                                image=add_house_icon_tk,
+                                text=" Gebäude Verwalten ",
+                                image=check_house_icon_tk,
                                 compound="right",  # verbindet Text & Bild
                                 font=("Arial", 25),
                                 background="gray74",
                                 command=empty_button)
 
-gebaeude_add_button.grid(row=1, column=0, padx=20, pady=20)
-# anchor -> Ausrichtung nach Himmelsrichtung
-# pady/padx -> Seitenabstand
-
-remove_house_icon = Image.open("graphics/house-remove-512.png").resize((50, 50))
-remove_house_icon_tk = ImageTk.PhotoImage(remove_house_icon)
-
-gebaeude_remove_button = tk.Button(root,
-                                   text=" Gebäude entfernen ",
-                                   image=remove_house_icon_tk,
-                                   compound="right",  # verbindet Text & Bild
-                                   font=("Arial", 25),
-                                   background="gray74",
-                                   command=empty_button)
-
-gebaeude_remove_button.grid(row=1, column=1, padx=20, pady=20)
+gebaeude_add_button.grid(row=1, column=0, columnspan=1, padx=20, pady=20)
 
 root.mainloop()  # Ereignissschleife innerhalb des Fensters
