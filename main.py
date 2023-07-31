@@ -24,12 +24,13 @@ root.minsize(width=800, height=400)  # Mindestgoeße des Fensters in px
 root.geometry("1280x720")  # Standardgroeße des Fensters in px
 root.resizable(width=True, height=True)  # Ob Groeße des Fensters bearbeitbar
 
-add_house_icon = Image.open("graphics/house.png").resize((50, 50))
+add_house_icon = Image.open("graphics/house-add-512.png").resize((50, 50))
 add_house_icon_tk = ImageTk.PhotoImage(add_house_icon)
 
-label1 = tk.Label(root, text="Gebäude hinzufügen",
+label1 = tk.Label(root, text="Gebäude hinzufügen ",
                   image=add_house_icon_tk,
-                  compound="right")  # verbindet Text & Bild
+                  compound="right",
+                  font=("Arial", 25))  # verbindet Text & Bild
 label1.pack()
 
 root.mainloop()  # Ereignissschleife innerhalb des Fensters
