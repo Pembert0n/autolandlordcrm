@@ -27,10 +27,13 @@ root.resizable(width=True, height=True)  # Ob Groeße des Fensters bearbeitbar
 add_house_icon = Image.open("graphics/house-add-512.png").resize((50, 50))
 add_house_icon_tk = ImageTk.PhotoImage(add_house_icon)
 
-label1 = tk.Label(root, text="Gebäude hinzufügen ",
-                  image=add_house_icon_tk,
-                  compound="right",
-                  font=("Arial", 25))  # verbindet Text & Bild
-label1.pack()
+button1 = tk.Button(root,
+                    text="Gebäude hinzufügen ",
+                    image=add_house_icon_tk,
+                    compound="right",  # verbindet Text & Bild
+                    font=("Arial", 25),
+                    background="gray74")
+
+button1.pack(anchor="w", pady=20, padx=20)  # gibt Abstand zum Rand an
 
 root.mainloop()  # Ereignissschleife innerhalb des Fensters
