@@ -4,8 +4,9 @@ da sich diese in einem Loop befinden?"""
 # from tkhtmlview import HTMLLabel
 # from main import startseite, gebaeude_page, back_to_main_page
 import os
-from tkhtmlview import HTMLLabel
+# from tkhtmlview import HTMLLabel
 from database.db_init import create_database
+
 
 def on_next_page_click(startseite, gebaeude_page, back_to_main_page):
     """Ausführen des HTML Codes"""
@@ -14,7 +15,7 @@ def on_next_page_click(startseite, gebaeude_page, back_to_main_page):
     startseite.set_html(html_test)
     gebaeude_page.grid_forget()
     back_to_main_page.grid(row=0, column=0, padx=20, pady=20)
-    
+
 
 def on_back_to_main_page_click(startseite, gebaeude_page, back_to_main_page):
     """Ausführen des HTML Codes für die Startseite"""
@@ -24,7 +25,9 @@ def on_back_to_main_page_click(startseite, gebaeude_page, back_to_main_page):
     back_to_main_page.grid_forget()
     gebaeude_page.grid(row=0, column=0, padx=20, pady=20)
 
+
 def check_database():
+    """Erstellt database nur wenn nicht vorhanden"""
     if os.path.exists("ALC.db"):
         print("Keine neue DB erstellt")  # debug
     else:
