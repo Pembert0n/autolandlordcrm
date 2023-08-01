@@ -2,25 +2,29 @@
 da sich diese in einem Loop befinden?"""
 # import tkinter as tk
 # from tkhtmlview import HTMLLabel
-from main import startseite, next_test_page, back_to_main_page
+# from main import startseite, next_test_page, back_to_main_page
+import os
+from tkhtmlview import HTMLLabel
+from database.db_init import create_database
 
-
-def on_next_page_click():
+def on_next_page_click(startseite, next_test_page, back_to_main_page):
     """Ausführen des HTML Codes"""
     with open("html_pages/test_page.html", "r", encoding="utf-8") as file:
         html_test = file.read()
     startseite.set_html(html_test)
-    next_test_page.grid_forget()  # Die Schaltfläche next_test_page ausblenden
+    next_test_page.grid_forget()
     back_to_main_page.grid(row=2, column=0, padx=20, pady=20)
-    # Die Schaltfläche back_to_main_page einblenden
 
-
-def on_back_to_main_page_click():
+def on_back_to_main_page_click(startseite, next_test_page, back_to_main_page):
     """Ausführen des HTML Codes für die Startseite"""
     with open("html_pages/main_page.html", "r", encoding="utf-8") as file:
         html_startseite = file.read()
     startseite.set_html(html_startseite)
     back_to_main_page.grid_forget()
-    # Die Schaltfläche back_to_main_page ausblenden
     next_test_page.grid(row=2, column=0, padx=20, pady=20)
-    # Die Schaltfläche next_test_page einblenden
+
+def check_database():
+    if os.path.exists("ALC.db"):
+        print("Keine neue DB erstellt")  # debug
+    else:
+        create_database()
