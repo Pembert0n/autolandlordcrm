@@ -7,12 +7,13 @@ import tkinter as tk
 from PIL import Image, ImageTk
 from logic import empty_button
 
+
 def main_page(root):
     """Startseite der Anwendung"""
     banner = tk.Label(root,
-                    text="ALC - Automated Landlord CRM",
-                    font=("Arial", 25),
-                    anchor="w")
+                      text="ALC - Automated Landlord CRM",
+                      font=("Arial", 25),
+                      anchor="w")
 
     banner.grid(row=0, column=0, columnspan=1, padx=0, pady=0)
 
