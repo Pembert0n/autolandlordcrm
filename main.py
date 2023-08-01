@@ -39,26 +39,30 @@ startseite = HTMLLabel(root, html=html_startseite)
 startseite.grid(row=0, column=1, columnspan=5, padx=20, pady=20)
 
 gebaeude_page = tk.Button(root,
-                          text="Gebäudeverwaltung",
+                          text=" Gebäude Verwalten ",
                           command=lambda:
                           gebaeude_page_click(startseite,
                                              gebaeude_page,
+                                             wohnung_page,
                                              back_to_main_page))
 gebaeude_page.grid(row=0, column=0, padx=20, pady=20)
 
-gebaeude_page = tk.Button(root,
-                          text="Hausverwaltung",
+wohnung_page = tk.Button(root,
+                          text="Wohnungsverwaltung",
                           command=lambda:
                           haus_page_click(startseite,
                                              gebaeude_page,
+                                             wohnung_page,
                                              back_to_main_page))
-gebaeude_page.grid(row=1, column=0, padx=20, pady=20)
+
+wohnung_page.grid(row=1, column=0, padx=20, pady=20)
 
 back_to_main_page = tk.Button(root,
                               text="Zurück zur Startseite",
                               command=lambda:
                               on_back_to_main_page_click(startseite,
                                                          gebaeude_page,
+                                                         wohnung_page,
                                                          back_to_main_page))
 
 if __name__ == "__main__":

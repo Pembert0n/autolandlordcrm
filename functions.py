@@ -8,30 +8,35 @@ import os
 from database.db_init import create_database
 
 
-def gebaeude_page_click(startseite, gebaeude_page, back_to_main_page):
+def gebaeude_page_click(startseite, gebaeude_page, wohnung_page, back_to_main_page):
     """Ausführen des HTML Codes"""
     with open("html_pages/test_page.html", "r", encoding="utf-8") as file:
         html_test = file.read()
     startseite.set_html(html_test)
     gebaeude_page.grid_forget()
+    wohnung_page.grid_forget()
+    back_to_main_page.grid_forget()
     back_to_main_page.grid(row=0, column=0, padx=20, pady=20)
 
 
-def haus_page_click(startseite, gebaeude_page, back_to_main_page):
+def haus_page_click(startseite, gebaeude_page, wohnung_page, back_to_main_page):
     """Ausführen des HTML Codes"""
     with open("html_pages/test_page_copy.html", "r", encoding="utf-8") as file:
         html_test = file.read()
     startseite.set_html(html_test)
     gebaeude_page.grid_forget()
+    wohnung_page.grid_forget()
+    back_to_main_page.grid_forget()
     back_to_main_page.grid(row=0, column=0, padx=20, pady=20)
 
 
-def on_back_to_main_page_click(startseite, gebaeude_page, back_to_main_page):
+def on_back_to_main_page_click(startseite, gebaeude_page, wohnung_page, back_to_main_page):
     """Ausführen des HTML Codes für die Startseite"""
     with open("html_pages/main_page.html", "r", encoding="utf-8") as file:
         html_startseite = file.read()
     startseite.set_html(html_startseite)
     back_to_main_page.grid_forget()
+    wohnung_page.grid(row=0, column=0, padx=20, pady=20)
     gebaeude_page.grid(row=1, column=0, padx=20, pady=20)
 
 
