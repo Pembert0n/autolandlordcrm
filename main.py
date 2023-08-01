@@ -6,11 +6,14 @@ PIL zum öffnen von Bildern
 """
 import tkinter as tk
 import os
+# from tkinter import ttk
+# from PIL import Image, ImageTk
 from tkhtmlview import HTMLLabel
 from database.db_init import create_database
 from functions import on_next_page_click, on_back_to_main_page_click, check_database
 
 if os.path.exists("ALC.db"):
+    # pass
     print("Keine neue DB erstellt")  # debug
 else:
     create_database()
@@ -38,4 +41,4 @@ back_to_main_page = tk.Button(root, text="Zurück zur Startseite", command=lambd
 
 if __name__ == "__main__":
     check_database()
-    root.mainloop()
+    root.mainloop()  # Ereignissschleife innerhalb des Fensters
