@@ -36,8 +36,8 @@ def on_back_to_main_page_click(startseite, gebaeude_page, wohnung_page, back_to_
         html_startseite = file.read()
     startseite.set_html(html_startseite)
     back_to_main_page.grid_forget()
-    wohnung_page.grid(row=0, column=0, padx=20, pady=20)
-    gebaeude_page.grid(row=1, column=0, padx=20, pady=20)
+    gebaeude_page.grid(row=0, column=0, padx=20, pady=20)
+    wohnung_page.grid(row=1, column=0, padx=20, pady=20)
 
 
 def check_database():
