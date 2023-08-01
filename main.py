@@ -29,12 +29,12 @@ with open("html_pages/main_page.html", "r", encoding="utf-8") as file:
     html_startseite = file.read()
 
 startseite = HTMLLabel(root, html=html_startseite)
-startseite.grid(row=1, column=0, columnspan=1, padx=20, pady=20)
+startseite.grid(row=0, column=1, columnspan=1, padx=20, pady=20)
 
-next_test_page = tk.Button(root, text="pls go 2", command=lambda: on_next_page_click(startseite, next_test_page, back_to_main_page))
-next_test_page.grid(row=2, column=0, padx=20, pady=20)
+gebaeude_page = tk.Button(root, text="Gebäudeverwaltung", command=lambda: on_next_page_click(startseite, gebaeude_page, back_to_main_page))
+gebaeude_page.grid(row=0, column=0, padx=20, pady=20)
 
-back_to_main_page = tk.Button(root, text="Back to Main Page", command=lambda: on_back_to_main_page_click(startseite, next_test_page, back_to_main_page))
+back_to_main_page = tk.Button(root, text="Zurück zur Startseite", command=lambda: on_back_to_main_page_click(startseite, gebaeude_page, back_to_main_page))
 
 if __name__ == "__main__":
     check_database()
