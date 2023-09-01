@@ -1,86 +1,42 @@
-\documentclass[a4paper,onecolumn,draft,pdftex]{report}
-\usepackage{ngerman}
-\usepackage[utf8x]{inputenc}
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
 
 \begin{document}
-\author{n.n. \\
-Universit"at Münster}
-\title{\LaTeX{} Testdokument}
-\date{November 2005}
-\setcounter{secnumdepth}{3}
-\maketitle
 
+% Hinzufügen von "Mietvertrag" oben links in die Ecke
+\begin{minipage}{0.7\textwidth}
+  \textbf{\Large {Mietvertrag für Wohnungen}} \\
+\end{minipage}%
+% Hinzufügen der Vertragsnummer oben rechts in die Ecke
+\begin{minipage}{0.3\textwidth}
+  \begin{flushright}
+    Vertragsnummer: [12]
+  \end{flushright}
+\end{minipage}
 
-\begin{abstract}
-Hier steht die Zusammenfassung des Textes. LaTeX ist ein m\"achtiges und flexibles Satzsystem, das sich besonders f\"ur
-wissenschaftliche und technische Publikationen eignet.
-\end{abstract}
+\textcolor{green}{\rule{\linewidth}{2pt}} % Horizontale grüne Linie unter "Mietvertrag"
 
+\section*{Vertragsparteien}
 
-\chapter{Anfangskapitel}
-\section{Abschnitt1}
-Dies ist der erste Abschnitt des ersten Kapitels. Hierbei soll gezeigt werden,
-wie man einfach auf zweispaltigen Satz umschalten kann.\\[4cm]
-Nach einem Zeilenumbruch von 5 cm geht es einfach weiter.
-\subsection{Unterabschnitt}
+\begin{tabular}{l l}
+Vermieter: & [Name und Adresse des Vermieters] \\
+Mieter: & [Name und Adresse des Mieters] \\
+\end{tabular}
 
-LaTeX ist ein m\"achtiges und flexibles Satzsystem, das sich besonders f\"ur
-wissenschaftliche und technische Publikationen eignet. Autoren k\"onnen
-aus einer Vielzahl von fertigen Layouts ausw\"ahlen und diese eigenen 
-Vorstellungen anpassen. 
-\subsubsection{Noch ein Unterabschnitt}
+\section*{Mietobjekt}
 
-Mit speziellen Komponenten, z. B. zur Erzeugung 
-von PDF-Dateien, k\"onnen LaTeX-Publikationen fr die Ver\"offentlichung 
-auf CD-ROM oder im Internet vorbereitet werden. Das komplette Satzsystem 
-ist frei erh\"altlich und steht praktisch auf allen verbreiteten Betriebssystemen 
-zur Verf\"ugung.
-LaTeX ist ein m\"achtiges und flexibles Satzsystem, das sich besonders f\"ur
-wissenschaftliche und technische Publikationen eignet. Autoren k\"onnen
-aus einer Vielzahl von fertigen Layouts ausw\"ahlen und diese eigenen 
-Vorstellungen anpassen. Mit speziellen Komponenten, z. B. zur Erzeugung 
-von PDF-Dateien, k\"onnen LaTeX-Publikationen fr die Ver\"offentlichung 
-auf CD-ROM oder im Internet vorbereitet werden. Das komplette Satzsystem 
-ist frei erh\"altlich und steht praktisch auf allen verbreiteten Betriebssystemen 
-zur Verf\"ugung.
-LaTeX ist ein m\"achtiges und flexibles Satzsystem, das sich besonders f\"ur
-wissenschaftliche und technische Publikationen eignet. Autoren k\"onnen
-aus einer Vielzahl von fertigen Layouts ausw\"ahlen und diese eigenen 
-Vorstellungen anpassen. Mit speziellen Komponenten, z. B. zur Erzeugung 
-von PDF-Dateien, k\"onnen LaTeX-Publikationen fr die Ver\"offentlichung 
-auf CD-ROM oder im Internet vorbereitet werden. Das komplette Satzsystem 
-ist frei erh\"altlich und steht praktisch auf allen verbreiteten Betriebssystemen 
-zur Verf\"ugung.
+\begin{enumerate}[label=(\alph*)]
+\item Art der vermieteten Immobilie: [Beschreibung, z.B., Wohnung, Haus, Büro]
+\item Adresse des Mietobjekts: [Adresse des Mietobjekts]
+\item Fläche des Mietobjekts: [Größe in Quadratmetern]
+\end{enumerate}
 
-LaTeX ist ein m\"achtiges und flexibles Satzsystem, das sich besonders f\"ur
-wissenschaftliche und technische Publikationen eignet. Autoren k\"onnen
-aus einer Vielzahl von fertigen Layouts ausw\"ahlen und diese eigenen 
-Vorstellungen anpassen. Mit speziellen Komponenten, z. B. zur Erzeugung 
-von PDF-Dateien, k\"onnen LaTeX-Publikationen fr die Ver\"offentlichung 
-auf CD-ROM oder im Internet vorbereitet werden. Das komplette Satzsystem 
-ist frei erh\"altlich und steht praktisch auf allen verbreiteten Betriebssystemen 
-zur Verf\"ugung. 
-
-\section{Abschnitt2}
-Und dies ist nur der zweite Abschnitt. LaTeX ist ein m\"achtiges und flexibles Satzsystem, das sich besonders f\"ur
-wissenschaftliche und technische Publikationen eignet. Autoren k\"onnen
-aus einer Vielzahl von fertigen Layouts ausw\"ahlen und diese eigenen 
-Vorstellungen anpassen. Mit speziellen Komponenten, z. B. zur Erzeugung 
-von PDF-Dateien, k\"onnen LaTeX-Publikationen fr die Ver\"offentlichung 
-auf CD-ROM oder im Internet vorbereitet werden. Das komplette Satzsystem 
-ist frei erh\"altlich und steht praktisch auf allen verbreiteten Betriebssystemen 
-zur Verf\"ugung.
-
-\chapter{Zweites Kapitel}
-Dieses Kapitel enth"alt keine weitere Untergliederung.
-LaTeX ist ein m\"achtiges und flexibles Satzsystem, das sich besonders f\"ur
-wissenschaftliche und technische Publikationen eignet. Autoren k\"onnen
-aus einer Vielzahl von fertigen Layouts ausw\"ahlen und diese eigenen 
-Vorstellungen anpassen. Mit speziellen Komponenten, z. B. zur Erzeugung 
-von PDF-Dateien, k\"onnen LaTeX-Publikationen fr die Ver\"offentlichung 
-auf CD-ROM oder im Internet vorbereitet werden. Das komplette Satzsystem 
-ist frei erh\"altlich und steht praktisch auf allen verbreiteten Betriebssystemen 
-zur Verf\"ugung.
+% Weitere Abschnitte deines Mietvertrags...
 
 \end{document}
-% Hier ist das Dokument nun zu Ende.
